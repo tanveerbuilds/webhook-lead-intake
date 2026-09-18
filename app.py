@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sample lead-intake webhook — demonstration only.
+Sample lead-intake webhook (demonstration only).
 
 Receives lead payloads from chatbots/forms, validates a shared secret,
 and appends them to a local JSONL file. Shows the shape of a real intake
