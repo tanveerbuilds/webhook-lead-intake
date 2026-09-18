@@ -1,13 +1,13 @@
 # webhook-lead-intake
 
-> **Sample / demo build** — a minimal lead-intake webhook: receives lead payloads from chatbots or forms, validates a shared secret, and appends them to a local file. Built for learning and demonstration, not production use.
+> **Sample / demo build.** This is a small learning project: a lead intake webhook that receives lead payloads from chatbots or forms, validates a shared secret, and appends them to a local file. Not production code.
 
-## What this sample demonstrates
+## What it shows
 
-- **Webhook endpoint** — `POST /webhook/leads` accepts a JSON lead payload
-- **Shared-secret auth** — requests must carry the `X-Webhook-Secret` header
-- **Simple storage** — accepted leads are appended to `leads.jsonl`, one JSON object per line
-- **Read-back** — `GET /leads` returns everything stored so far
+* A webhook endpoint: `POST /webhook/leads` accepts a JSON lead payload.
+* Shared secret auth: requests must carry the `X-Webhook-Secret` header.
+* Simple storage: accepted leads are appended to `leads.jsonl`, one JSON object per line.
+* Read back: `GET /leads` returns everything stored so far.
 
 ## Project structure
 
@@ -34,8 +34,8 @@ Then open http://localhost:8000/leads to see the stored lead.
 
 ## Notes
 
-- This is a **demonstration**, not a finished product: a shared secret is not real auth, there is no rate limiting, and storage is a local file.
-- In production this would verify a provider signature (e.g. WhatsApp/Stripe style HMAC), write to a database or CRM, and run behind HTTPS with rate limits.
+* This is a **demonstration**, not a finished product. A shared secret is not real auth, there is no rate limiting, and storage is a local file.
+* In production this would verify a provider signature (WhatsApp or Stripe style HMAC), write to a database or CRM, and run behind HTTPS with rate limits.
 
 ## Tech
 
